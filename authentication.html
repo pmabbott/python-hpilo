@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Authentication settings &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Authentication settings &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Security and SSL settings" href="security.html" />
     <link rel="prev" title="iLO licensing" href="license.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="license.html" title="iLO licensing"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -65,7 +64,7 @@
   <div class="section" id="authentication-settings">
 <h1>Authentication settings<a class="headerlink" href="#authentication-settings" title="Permalink to this headline">¶</a></h1>
 <p>By default, an iLO has only one user account: Administrator. But via the API
-you can create more users and manipulate them. It&#8217;s also possible to import SSH
+you can create more users and manipulate them. It’s also possible to import SSH
 keys, configure kerberos settings and configure single-sign on. Some methods
 accept a lot of arguments, for details on what these arguments mean, I will
 refer to the <a class="reference external" href="http://www.hp.com/support/ilo4_cli_gde_en">ilo scripting guide</a>.</p>
@@ -76,7 +75,7 @@ refer to the <a class="reference external" href="http://www.hp.com/support/ilo4_
 <dt id="hpilo.Ilo.get_all_users">
 <code class="descname">get_all_users</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_all_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of all loginnames</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_all_users</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_all_users</span><span class="p">()</span>
 <span class="go">[&#39;Administrator&#39;]</span>
 </pre></div>
 </div>
@@ -86,7 +85,7 @@ refer to the <a class="reference external" href="http://www.hp.com/support/ilo4_
 <dt id="hpilo.Ilo.get_all_user_info">
 <code class="descname">get_all_user_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_all_user_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get basic and authorization info of all users</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_all_user_info</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_all_user_info</span><span class="p">()</span>
 <span class="go">{&#39;Administrator&#39;: {&#39;admin_priv&#39;: True,</span>
 <span class="go">                   &#39;config_ilo_priv&#39;: True,</span>
 <span class="go">                   &#39;remote_cons_priv&#39;: True,</span>
@@ -102,7 +101,7 @@ refer to the <a class="reference external" href="http://www.hp.com/support/ilo4_
 <dt id="hpilo.Ilo.get_user">
 <code class="descname">get_user</code><span class="sig-paren">(</span><em>user_login</em><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get user info about a specific user</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_login</span><span class="o">=</span><span class="s1">&#39;Administrator&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_login</span><span class="o">=</span><span class="s1">&#39;Administrator&#39;</span><span class="p">)</span>
 <span class="go">{&#39;admin_priv&#39;: True,</span>
 <span class="go"> &#39;config_ilo_priv&#39;: True,</span>
 <span class="go"> &#39;remote_cons_priv&#39;: True,</span>
@@ -152,7 +151,7 @@ should be the content of an id_dsa.pub or id_rsa.pub file</p>
 <dt id="hpilo.Ilo.get_dir_config">
 <code class="descname">get_dir_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_dir_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get directory authentication configuration</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_dir_config</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_dir_config</span><span class="p">()</span>
 <span class="go">{&#39;dir_authentication_enabled&#39;: False,</span>
 <span class="go"> &#39;dir_enable_grp_acct&#39;: False,</span>
 <span class="go"> &#39;dir_grpacct1_name&#39;: &#39;Administrators&#39;,</span>
@@ -199,7 +198,7 @@ will be changed.</p>
 <dt id="hpilo.Ilo.get_sso_settings">
 <code class="descname">get_sso_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_sso_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the HP SIM Single Sign-On settings</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_sso_settings</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_sso_settings</span><span class="p">()</span>
 <span class="go">{&#39;administrator_role&#39;: {&#39;admin_priv&#39;: True,</span>
 <span class="go">                        &#39;cfg_ilo_priv&#39;: True,</span>
 <span class="go">                        &#39;login_priv&#39;: True,</span>
@@ -232,7 +231,7 @@ will be changed.</p>
 <dt id="hpilo.Ilo.get_twofactor_settings">
 <code class="descname">get_twofactor_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_twofactor_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get two-factor authentication settings</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_twofactor_settings</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_twofactor_settings</span><span class="p">()</span>
 <span class="go">{&#39;auth_twofactor_enable&#39;: False,</span>
 <span class="go"> &#39;cert_owner_subject&#39;: None,</span>
 <span class="go"> &#39;cert_revocation_check&#39;: False}</span>
@@ -266,18 +265,32 @@ will be changed.</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -297,14 +310,14 @@ will be changed.</p>
         <li class="right" >
           <a href="license.html" title="iLO licensing"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

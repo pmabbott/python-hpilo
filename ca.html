@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Managing SSL certificates &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Managing SSL certificates &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="iLO information search" href="elasticsearch.html" />
     <link rel="prev" title="Deployment profiles" href="profile.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="profile.html" title="Deployment profiles"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -65,18 +64,18 @@
   <div class="section" id="managing-ssl-certificates">
 <h1>Managing SSL certificates<a class="headerlink" href="#managing-ssl-certificates" title="Permalink to this headline">¶</a></h1>
 <p>When managing large amounts of iLO interfaces, the constant SSL warnings are a
-nuisance, so let&#8217;s make sure we have proper SSL certificates. This script will
+nuisance, so let’s make sure we have proper SSL certificates. This script will
 make that easy to do for you by taking care of all the CA work. All you need to
-do is add the CA&#8217;s certificate to your browsers trusted CA list.</p>
+do is add the CA’s certificate to your browsers trusted CA list.</p>
 <p>First thing to do is configure the CA. Add something like the following to your
 <code class="file docutils literal"><span class="pre">~/.ilo.conf</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>[ca]
-path = ~/.hpilo_ca
-country = NL
-state = Flevoland
-locality = Lelystad
-organization = Kaarsemaker.net
-organizational_unit = Sysadmin
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">ca</span><span class="p">]</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">hpilo_ca</span>
+<span class="n">country</span> <span class="o">=</span> <span class="n">NL</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">Flevoland</span>
+<span class="n">locality</span> <span class="o">=</span> <span class="n">Lelystad</span>
+<span class="n">organization</span> <span class="o">=</span> <span class="n">Kaarsemaker</span><span class="o">.</span><span class="n">net</span>
+<span class="n">organizational_unit</span> <span class="o">=</span> <span class="n">Sysadmin</span>
 </pre></div>
 </div>
 <p>This path can point to an existing CA, the only requirement is that
@@ -84,7 +83,7 @@ organizational_unit = Sysadmin
 values are used when generating the certificates for the iLOs and are all
 optional, they default to what HP puts in there.</p>
 <p>If the CA does not yet exist, you can create it as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ hpilo_ca init
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ hpilo_ca init
 Generating RSA private key, 2048 bit long modulus
 .+++
 ..................+++
@@ -111,12 +110,12 @@ will check several things:</p>
 <div><ul class="simple">
 <li>Firmware is upgraded if necessary</li>
 <li>The hostname is set to the name you use to connect to it, if needed</li>
-<li>iLO2 is configured to use FQDN&#8217;s for certificate signing requests</li>
+<li>iLO2 is configured to use FQDN’s for certificate signing requests</li>
 </ul>
 </div></blockquote>
 <p>It will then download the certificate signing request, sign it and upload the
-signed certificate. Here&#8217;s an example of it at work:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ ./hpilo_ca sign example-server.int.kaarsemaker.net
+signed certificate. Here’s an example of it at work:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ./hpilo_ca sign example-server.int.kaarsemaker.net
 (1/5) Checking certificate config of example-server.int.kaarsemaker.net
 (2/5) Retrieving certificate signing request
 (3/5) Signing certificate
@@ -178,18 +177,32 @@ Data Base Updated
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -209,14 +222,14 @@ Data Base Updated
         <li class="right" >
           <a href="profile.html" title="Deployment profiles"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Active Health System and Insight Remote Support &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Active Health System and Insight Remote Support &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Deployment profiles" href="profile.html" />
     <link rel="prev" title="Federation groups" href="federation.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="federation.html" title="Federation groups"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -74,7 +73,7 @@ let you inspect and manipulate the AHS and ERS configuration and submit data.</p
 <dt id="hpilo.Ilo.get_ahs_status">
 <code class="descname">get_ahs_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_ahs_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get active health system logging status</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_ahs_status</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_ahs_status</span><span class="p">()</span>
 <span class="go">{&#39;ahs_hardware_status&#39;: &#39;ENABLED&#39;,</span>
 <span class="go"> &#39;ahs_status&#39;: &#39;ENABLED&#39;,</span>
 <span class="go"> &#39;temp_ahs_disabled&#39;: &#39;NO&#39;}</span>
@@ -98,7 +97,7 @@ let you inspect and manipulate the AHS and ERS configuration and submit data.</p
 <dt id="hpilo.Ilo.get_ers_settings">
 <code class="descname">get_ers_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_ers_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the ERS Insight Remote Support settings</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_ers_settings</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_ers_settings</span><span class="p">()</span>
 <span class="go">{&#39;ers_agent&#39;: &#39;&#39;,</span>
 <span class="go"> &#39;ers_collection_frequency&#39;: &#39;P30D&#39;,</span>
 <span class="go"> &#39;ers_connect_model&#39;: 0,</span>
@@ -192,18 +191,32 @@ that you must also call dc_registration_complete</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -223,14 +236,14 @@ that you must also call dc_registration_complete</p>
         <li class="right" >
           <a href="federation.html" title="Federation groups"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

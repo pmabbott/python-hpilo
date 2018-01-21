@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Security and SSL settings &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Security and SSL settings &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Server health" href="health.html" />
     <link rel="prev" title="Authentication settings" href="authentication.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="authentication.html" title="Authentication settings"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -64,7 +63,7 @@
             
   <div class="section" id="security-and-ssl-settings">
 <h1>Security and SSL settings<a class="headerlink" href="#security-and-ssl-settings" title="Permalink to this headline">¶</a></h1>
-<p>With these functions, you can ensure your iLO&#8217;s security settings are as secure
+<p>With these functions, you can ensure your iLO’s security settings are as secure
 as you want them, including using proper SSL certificates for communication.</p>
 <dl class="class">
 <dt>
@@ -79,7 +78,7 @@ as you want them, including using proper SSL certificates for communication.</p>
 <dt id="hpilo.Ilo.get_cert_subject_info">
 <code class="descname">get_cert_subject_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_cert_subject_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get ssl certificate subject information</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_cert_subject_info</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_cert_subject_info</span><span class="p">()</span>
 <span class="go">{&#39;csr_subject_common_name&#39;: &#39;example-server.int.kaarsemaker.net&#39;,</span>
 <span class="go"> &#39;csr_subject_country&#39;: &#39;US&#39;,</span>
 <span class="go"> &#39;csr_subject_location&#39;: &#39;Houston&#39;,</span>
@@ -123,7 +122,7 @@ and license key</p>
 <dt id="hpilo.Ilo.get_encrypt_settings">
 <code class="descname">get_encrypt_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_encrypt_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the iLO encryption settings</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_encrypt_settings</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_encrypt_settings</span><span class="p">()</span>
 <span class="go">/home/dennis/code/python-hpilo/hpilo.py:533: IloWarning: ESKM servers are not configured.</span>
 <span class="go">  warnings.warn(child.get(&#39;MESSAGE&#39;), IloWarning)</span>
 <span class="go">{&#39;enable_redundancy&#39;: True,</span>
@@ -140,7 +139,7 @@ and license key</p>
 <dt id="hpilo.Ilo.get_fips_status">
 <code class="descname">get_fips_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_fips_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is the FIPS-mandated AES/3DESencryption enforcement in place</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_fips_status</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_fips_status</span><span class="p">()</span>
 <span class="go">{&#39;fips_mode&#39;: &#39;Enabled&#39;}</span>
 </pre></div>
 </div>
@@ -150,7 +149,7 @@ and license key</p>
 <dt id="hpilo.Ilo.get_security_msg">
 <code class="descname">get_security_msg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_security_msg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the security message that is displayed on the login screen</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_security_msg</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_security_msg</span><span class="p">()</span>
 <span class="go">{&#39;security_msg&#39;: &#39;Enabled&#39;,</span>
 <span class="go"> &#39;security_msg_text&#39;: &#39;Time is an illusion. Lunchtime doubly so&#39;}</span>
 </pre></div>
@@ -167,7 +166,7 @@ and license key</p>
 <dt id="hpilo.Ilo.get_tpm_status">
 <code class="descname">get_tpm_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_tpm_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the status of the Trusted Platform Module</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_tpm_status</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_tpm_status</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">my_ilo</span><span class="o">.</span><span class="n">get_tpm_status</span><span class="p">())</span>
 <span class="go">{&#39;tpm_enabled&#39;: &#39;No&#39;, &#39;tpm_present&#39;: &#39;No&#39;, &#39;tpm_supported&#39;: &#39;Yes&#39;}</span>
 </pre></div>
@@ -200,18 +199,32 @@ and license key</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -231,14 +244,14 @@ and license key</p>
         <li class="right" >
           <a href="authentication.html" title="Authentication settings"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

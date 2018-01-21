@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Common issues &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Common issues &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Contributing guide" href="contributing.html" />
     <link rel="prev" title="Managing iLO’s with puppet" href="puppet.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="puppet.html" title="Managing iLO’s with puppet"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -64,20 +63,20 @@
             
   <div class="section" id="common-issues">
 <h1>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h1>
-<p>The iLO interfaces aren&#8217;t the most helpful when they detect something
+<p>The iLO interfaces aren’t the most helpful when they detect something
 erroneous. These are some common issues and their solutions. If you have a
 problem that is not listed here, or solved with these instructions, please file
 an issue at <a class="reference external" href="https://github.com/seveas/python-hpilo">https://github.com/seveas/python-hpilo</a>. When reporting bugs, please
 do send the problematic XML responses. These XML responses can be saved as
 follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>hpilo_cli example-server.int.kaarsemaker.net --save-response=for_bugreport.txt get_fw_version
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hpilo_cli</span> <span class="n">example</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">int</span><span class="o">.</span><span class="n">kaarsemaker</span><span class="o">.</span><span class="n">net</span> <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">response</span><span class="o">=</span><span class="n">for_bugreport</span><span class="o">.</span><span class="n">txt</span> <span class="n">get_fw_version</span>
 </pre></div>
 </div>
 <p>Of course you should replace the hostname  with the actual iLO hostname or ip,
 and get_fw_version with the actual call you want to make. If you use the python
 API instead of the CLI tool, set the <code class="xref py py-data docutils literal"><span class="pre">save_response</span></code> attribute on the ilo
 object:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">ilo</span> <span class="o">=</span> <span class="n">hpilo</span><span class="o">.</span><span class="n">Ilo</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">login</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ilo</span> <span class="o">=</span> <span class="n">hpilo</span><span class="o">.</span><span class="n">Ilo</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">login</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 <span class="n">ilo</span><span class="o">.</span><span class="n">save_response</span> <span class="o">=</span> <span class="s2">&quot;for_bugreport.txt&quot;</span>
 <span class="n">ilo</span><span class="o">.</span><span class="n">get_fw_version</span><span class="p">()</span>
 </pre></div>
@@ -85,7 +84,7 @@ object:</p>
 <p>These debug responses may contain sensitive information, which you should edit
 out. Please use a hexeditor to do so, or at least make sure your editor does
 not try to normalize newlines. It is important that the number of characters in
-the file stays the same, so don&#8217;t add or remove data, just overwrite sensitive
+the file stays the same, so don’t add or remove data, just overwrite sensitive
 values with XXXX.</p>
 <p>As github issues do not support attachments, feel fee to mail this debug
 information to <a class="reference external" href="mailto:dennis&#37;&#52;&#48;kaarsemaker&#46;net">the author</a> directly.</p>
@@ -94,20 +93,20 @@ information to <a class="reference external" href="mailto:dennis&#37;&#52;&#48;k
 <p>This might sound like a lame cop-out, but quite a few versions of especially
 iLO 3 firmware contain serious bugs that cause the XML interface to misbehave.
 Upgrading the firmware of an iLO is simple and does not impact the host at all,
-so it&#8217;s always a good idea to start with a firmware update:</p>
-<div class="highlight-python"><div class="highlight"><pre>hpilo_cli example-server.int.kaarsemaker.net update_rib_firmware version=latest
+so it’s always a good idea to start with a firmware update:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hpilo_cli</span> <span class="n">example</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">int</span><span class="o">.</span><span class="n">kaarsemaker</span><span class="o">.</span><span class="n">net</span> <span class="n">update_rib_firmware</span> <span class="n">version</span><span class="o">=</span><span class="n">latest</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="syntax-error-line-0">
 <h2>Syntax error: Line #0<a class="headerlink" href="#syntax-error-line-0" title="Permalink to this headline">¶</a></h2>
 <p>Occasionally you might see this error at the end of a traceback:</p>
-<div class="highlight-python"><div class="highlight"><pre>hpilo.IloError: Error communicating with iLO: Syntax error: Line #0: syntax error near &quot;&quot; in the line: &quot;&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hpilo</span><span class="o">.</span><span class="n">IloError</span><span class="p">:</span> <span class="n">Error</span> <span class="n">communicating</span> <span class="k">with</span> <span class="n">iLO</span><span class="p">:</span> <span class="n">Syntax</span> <span class="n">error</span><span class="p">:</span> <span class="n">Line</span> <span class="c1">#0: syntax error near &quot;&quot; in the line: &quot;&quot;</span>
 </pre></div>
 </div>
 <p>This generaly means that you are trying to call a method that is not supported
 for your device or the firmware version you use. Get this information with:</p>
-<div class="highlight-python"><div class="highlight"><pre>hpilo_cli example-server.int.kaarsemaker.net get_fw_version
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hpilo_cli</span> <span class="n">example</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">int</span><span class="o">.</span><span class="n">kaarsemaker</span><span class="o">.</span><span class="n">net</span> <span class="n">get_fw_version</span>
 </pre></div>
 </div>
 <p>And consult the HP sample XML files to find out whether this call is supported
@@ -118,8 +117,8 @@ call may be there, but not all arguments are supported.</p>
 <div class="section" id="elementtree-parseerror">
 <h2>ElementTree.ParseError<a class="headerlink" href="#elementtree-parseerror" title="Permalink to this headline">¶</a></h2>
 <p>Occasionally you might see either of these errors at the end of a traceback:</p>
-<div class="highlight-python"><div class="highlight"><pre>cElementTree.ParseError: not well-formed (invalid token): line 301, column 23
-xml.etree.ElementTree.ParseError: not well-formed (invalid token): line 301, column 23
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cElementTree</span><span class="o">.</span><span class="n">ParseError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">well</span><span class="o">-</span><span class="n">formed</span> <span class="p">(</span><span class="n">invalid</span> <span class="n">token</span><span class="p">):</span> <span class="n">line</span> <span class="mi">301</span><span class="p">,</span> <span class="n">column</span> <span class="mi">23</span>
+<span class="n">xml</span><span class="o">.</span><span class="n">etree</span><span class="o">.</span><span class="n">ElementTree</span><span class="o">.</span><span class="n">ParseError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">well</span><span class="o">-</span><span class="n">formed</span> <span class="p">(</span><span class="n">invalid</span> <span class="n">token</span><span class="p">):</span> <span class="n">line</span> <span class="mi">301</span><span class="p">,</span> <span class="n">column</span> <span class="mi">23</span>
 </pre></div>
 </div>
 <p>This means that the iLO interface is spewing invalid XML back at you.
@@ -129,7 +128,7 @@ version and try again. If the problem persists, please file a bug report.</p>
 </div>
 <div class="section" id="unexpected-errors-after-a-login-failure">
 <h2>Unexpected errors after a login failure<a class="headerlink" href="#unexpected-errors-after-a-login-failure" title="Permalink to this headline">¶</a></h2>
-<p>If you use the wrong credentials to access the XML interface, some iLO&#8217;s get
+<p>If you use the wrong credentials to access the XML interface, some iLO’s get
 into some weird state. Call <code class="xref py py-func docutils literal"><span class="pre">get_fw_version()</span></code> a few times to clear this
 state and recover.</p>
 </div>
@@ -138,8 +137,8 @@ state and recover.</p>
 <p>The early firmware versions of iLO3 had quite a few issues. To update from
 anything older than 1.28 to 1.50 or newer, you need to update in two steps:
 first update to 1.28 and then update to a later version:</p>
-<div class="highlight-python"><div class="highlight"><pre>hpilo_cli example-server.int.kaarsemaker.net update_rib_firmware version=1.28
-hpilo_cli example-server.int.kaarsemaker.net update_rib_firmware version=latest
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hpilo_cli</span> <span class="n">example</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">int</span><span class="o">.</span><span class="n">kaarsemaker</span><span class="o">.</span><span class="n">net</span> <span class="n">update_rib_firmware</span> <span class="n">version</span><span class="o">=</span><span class="mf">1.28</span>
+<span class="n">hpilo_cli</span> <span class="n">example</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">int</span><span class="o">.</span><span class="n">kaarsemaker</span><span class="o">.</span><span class="n">net</span> <span class="n">update_rib_firmware</span> <span class="n">version</span><span class="o">=</span><span class="n">latest</span>
 </pre></div>
 </div>
 </div>
@@ -164,7 +163,7 @@ delayed call or at the end of the delayed call.</p>
         <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="index.html" title="index">
           <img class="logo" src="_static/python-hpilo.png" alt="Logo"/>
-        </a></p><div class="sphinxlocaltoc">
+        </a></p><div class="sphinx-toc sphinxlocaltoc">
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Common issues</a><ul>
@@ -182,7 +181,7 @@ delayed call or at the end of the delayed call.</p>
   <div class="sphinxprev">
     <h4>Previous page</h4>
     <p class="topless"><a href="puppet.html"
-                          title="Previous page">&larr; Managing iLO&#8217;s with puppet</a></p>
+                          title="Previous page">&larr; Managing iLO’s with puppet</a></p>
   </div>
   <div class="sphinxnext">
     <h4>Next page</h4>
@@ -192,18 +191,32 @@ delayed call or at the end of the delayed call.</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -223,14 +236,14 @@ delayed call or at the end of the delayed call.</p>
         <li class="right" >
           <a href="puppet.html" title="Managing iLO’s with puppet"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

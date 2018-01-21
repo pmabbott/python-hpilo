@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Access from Python &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Access from Python &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Access from the shell" href="shell.html" />
     <link rel="prev" title="Installing python-hpilo" href="install.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="install.html" title="Installing python-hpilo"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -76,26 +75,26 @@ few auxiliarry items in this module too.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>hostname</strong> &#8211; Hostname or IP address of the iLO interface</li>
-<li><strong>login</strong> &#8211; Loginname to use for authentication, not used for <code class="xref py py-data docutils literal"><span class="pre">LOCAL</span></code> connections</li>
-<li><strong>password</strong> &#8211; Password to use for authentication, not used for <code class="xref py py-data docutils literal"><span class="pre">LOCAL</span></code> connections</li>
-<li><strong>timeout</strong> &#8211; Timeout for creating connections or receiving data</li>
-<li><strong>port</strong> &#8211; TCP port to use for HTTPS connections</li>
-<li><strong>protocol</strong> &#8211; The protocol to use. Either <code class="xref py py-data docutils literal"><span class="pre">hpilo.RAW</span></code> for remote
+<li><strong>hostname</strong> – Hostname or IP address of the iLO interface</li>
+<li><strong>login</strong> – Loginname to use for authentication, not used for <code class="xref py py-data docutils literal"><span class="pre">LOCAL</span></code> connections</li>
+<li><strong>password</strong> – Password to use for authentication, not used for <code class="xref py py-data docutils literal"><span class="pre">LOCAL</span></code> connections</li>
+<li><strong>timeout</strong> – Timeout for creating connections or receiving data</li>
+<li><strong>port</strong> – TCP port to use for HTTPS connections</li>
+<li><strong>protocol</strong> – The protocol to use. Either <code class="xref py py-data docutils literal"><span class="pre">hpilo.RAW</span></code> for remote
 iLO2 or older, <code class="xref py py-data docutils literal"><span class="pre">hpilo.HTTP</span></code> for remote ilo3 and
 newer or <code class="xref py py-data docutils literal"><span class="pre">hpilo.LOCAL</span></code> for using
 <strong class="program">hponcfg</strong> and the local kernel driver. If you do
 not specify this parameter, it will be autodetected.</li>
-<li><strong>delayed</strong> &#8211; By default, this library will immediately contact the iLO
+<li><strong>delayed</strong> – By default, this library will immediately contact the iLO
 for any method call you make and return a result. To save
 roundtrip time costs, set this to <code class="xref py py-data docutils literal"><span class="pre">False</span></code> and call
 the <a class="reference internal" href="#hpilo.Ilo.call_delayed" title="hpilo.Ilo.call_delayed"><code class="xref py py-meth docutils literal"><span class="pre">call_delayed()</span></code></a> method manually.</li>
-<li><strong>ssl_verify</strong> &#8211; By default, this library does not verify ssl
+<li><strong>ssl_verify</strong> – By default, this library does not verify ssl
 certificates, because the iLO comes with a self-signed
 certificate by default and sadly not many people fix this.
 But if you do fix this, you can actually force verification
 of the certificates.</li>
-<li><strong>ssl_context</strong> &#8211; If you need custom ssl or verification parameters, such
+<li><strong>ssl_context</strong> – If you need custom ssl or verification parameters, such
 as a custom CA certificate, you can pass a custom ssl
 context object with all the settings you need.</li>
 </ul>
@@ -108,7 +107,7 @@ context object with all the settings you need.</li>
 <code class="descname">call_delayed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.call_delayed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls all the delayed methods that have accumulated. This is best
 illustrated with an example. Observe the difference between:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span> <span class="o">=</span> <span class="n">hpilo</span><span class="o">.</span><span class="n">Ilo</span><span class="p">(</span><span class="s1">&#39;example-server.int.kaarsemaker.net&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrator&#39;</span><span class="p">,</span> <span class="s1">&#39;PassW0rd&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span> <span class="o">=</span> <span class="n">hpilo</span><span class="o">.</span><span class="n">Ilo</span><span class="p">(</span><span class="s1">&#39;example-server.int.kaarsemaker.net&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrator&#39;</span><span class="p">,</span> <span class="s1">&#39;PassW0rd&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">ilo</span><span class="o">.</span><span class="n">get_fw_version</span><span class="p">())</span>
 <span class="go">{&#39;firmware_date&#39;: &#39;Aug 26 2011&#39;,</span>
 <span class="go"> &#39;firmware_version&#39;: &#39;1.26&#39;,</span>
@@ -124,8 +123,8 @@ illustrated with an example. Observe the difference between:</p>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span> <span class="o">=</span> <span class="n">hpilo</span><span class="o">.</span><span class="n">Ilo</span><span class="p">(</span><span class="s1">&#39;example-server.int.kaarsemaker.net&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrator&#39;</span><span class="p">,</span>
-<span class="gp">... </span>                <span class="s1">&#39;PassW0rd&#39;</span><span class="p">,</span> <span class="n">delayed</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span> <span class="o">=</span> <span class="n">hpilo</span><span class="o">.</span><span class="n">Ilo</span><span class="p">(</span><span class="s1">&#39;example-server.int.kaarsemaker.net&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrator&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                <span class="s1">&#39;PassW0rd&#39;</span><span class="p">,</span> <span class="n">delayed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">ilo</span><span class="o">.</span><span class="n">get_fw_version</span><span class="p">())</span>
 <span class="go">None</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">ilo</span><span class="o">.</span><span class="n">get_uid_status</span><span class="p">())</span>
@@ -204,18 +203,32 @@ password.</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -235,14 +248,14 @@ password.</p>
         <li class="right" >
           <a href="install.html" title="Installing python-hpilo"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

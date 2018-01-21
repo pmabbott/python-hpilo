@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Boot settings and rebooting &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Boot settings and rebooting &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Virtual media" href="media.html" />
     <link rel="prev" title="Power manipulation" href="power.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="power.html" title="Power manipulation"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -67,7 +66,7 @@
 <p>HP servers can boot in various ways and from many devices. The functions in
 this section let you manipulate bootup settings and reboot the server and the
 iLO. If you need to power off the server hard, take a look at the
-<a class="reference internal" href="power.html"><em>power documentation</em></a>.</p>
+<a class="reference internal" href="power.html"><span class="doc">power documentation</span></a>.</p>
 <dl class="class">
 <dt>
 <em class="property">class </em><code class="descclassname">hpilo.</code><code class="descname">Ilo</code></dt>
@@ -99,7 +98,7 @@ iLO. If you need to power off the server hard, take a look at the
 <dt id="hpilo.Ilo.get_one_time_boot">
 <code class="descname">get_one_time_boot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_one_time_boot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the one time boot state of the host</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_one_time_boot</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_one_time_boot</span><span class="p">()</span>
 <span class="go">normal</span>
 </pre></div>
 </div>
@@ -122,7 +121,7 @@ RBSU (Boots into the system RBSU)</p>
 <dd><p>Get the boot order of the host. For uEFI hosts (gen9+), this returns
 a list of tuples (name, description. For older host it returns a
 list of names</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_persistent_boot</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_persistent_boot</span><span class="p">()</span>
 <span class="go">[&#39;cdrom&#39;, &#39;floppy&#39;, &#39;usb&#39;, &#39;hdd&#39;, &#39;network&#39;]</span>
 </pre></div>
 </div>
@@ -137,7 +136,7 @@ list of names</p>
 <dl class="method">
 <dt id="hpilo.Ilo.get_supported_boot_mode">
 <code class="descname">get_supported_boot_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_supported_boot_mode" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_supported_boot_mode</span><span class="p">()</span>
+<dd><div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_supported_boot_mode</span><span class="p">()</span>
 <span class="go">LEGACY_ONLY</span>
 </pre></div>
 </div>
@@ -147,7 +146,7 @@ list of names</p>
 <dt id="hpilo.Ilo.get_current_boot_mode">
 <code class="descname">get_current_boot_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_current_boot_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current boot mode (legaci or uefi)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_current_boot_mode</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_current_boot_mode</span><span class="p">()</span>
 <span class="go">LEGACY</span>
 </pre></div>
 </div>
@@ -157,7 +156,7 @@ list of names</p>
 <dt id="hpilo.Ilo.get_pending_boot_mode">
 <code class="descname">get_pending_boot_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_pending_boot_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the pending boot mode (legaci or uefi)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_pending_boot_mode</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_pending_boot_mode</span><span class="p">()</span>
 <span class="go">LEGACY</span>
 </pre></div>
 </div>
@@ -195,18 +194,32 @@ list of names</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -226,14 +239,14 @@ list of names</p>
         <li class="right" >
           <a href="power.html" title="Power manipulation"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

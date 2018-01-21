@@ -1,37 +1,36 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Contributing guide &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Contributing guide &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Common issues" href="troubleshooting.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -46,7 +45,7 @@
         <li class="right" >
           <a href="troubleshooting.html" title="Common issues"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -61,19 +60,19 @@
   <div class="section" id="contributing-guide">
 <h1>Contributing guide<a class="headerlink" href="#contributing-guide" title="Permalink to this headline">¶</a></h1>
 <p>python-hpilo is maintained by Dennis Kaarsemaker on <a class="reference external" href="https://github.com/seveas/python-hpilo">GitHub</a>. If you have a
-problem with the software, that&#8217;s the place to file an issue. And if you want
-to contribute to the project, that&#8217;s the place to go to as well.</p>
+problem with the software, that’s the place to file an issue. And if you want
+to contribute to the project, that’s the place to go to as well.</p>
 <p>Patches can be submitted as pull requests on github or mailed to
 <a class="reference external" href="mailto:dennis&#37;&#52;&#48;kaarsemaker&#46;net">dennis<span>&#64;</span>kaarsemaker<span>&#46;</span>net</a>.</p>
 <p>If you are looking for a really simple way of contributing, please contribute
-test data from a server model that&#8217;s not included in the tests yet, see
+test data from a server model that’s not included in the tests yet, see
 <cite>tests/README</cite> for more details.</p>
 <div class="section" id="coding-guidelines">
 <h2>Coding guidelines<a class="headerlink" href="#coding-guidelines" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>python-hpilo currently supports python 2.6 up to python 3.6, excluding
-3.0-3.2 Any new code in <cite>hpilo.py</cite> and <cite>hpilo_cli</cite> needs to be compatible
-with all these versions.</li>
+<li>python-hpilo currently supports python 2.6, 2.7 and 3.5 or newer. Any new
+code in <cite>hpilo.py</cite> and <cite>hpilo_cli</cite> needs to be compatible with all these
+versions.</li>
 <li>No non-stdlib dependencies in <cite>hpilo.py</cite> and <cite>hpilo_cli</cite>. Examples may have
 additional dependencies.</li>
 <li>All methods call into <code class="xref py py-func docutils literal"><span class="pre">_info_tag()</span></code> or <code class="xref py py-func docutils literal"><span class="pre">_control_tag()</span></code>. Any
@@ -96,7 +95,7 @@ See the <cite>tests/README</cite> file in the git repository for more details on
         <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="index.html" title="index">
           <img class="logo" src="_static/python-hpilo.png" alt="Logo"/>
-        </a></p><div class="sphinxlocaltoc">
+        </a></p><div class="sphinx-toc sphinxlocaltoc">
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Contributing guide</a><ul>
@@ -114,18 +113,32 @@ See the <cite>tests/README</cite> file in the git repository for more details on
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -142,14 +155,14 @@ See the <cite>tests/README</cite> file in the git repository for more details on
         <li class="right" >
           <a href="troubleshooting.html" title="Common issues"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

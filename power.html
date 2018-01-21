@@ -1,38 +1,37 @@
 
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Power manipulation &mdash; python-hpilo 4.0 documentation</title>
-    
+    <title>Power manipulation &#8212; python-hpilo 4.1 documentation</title>
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '4.0',
+        VERSION:     '4.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="top" title="python-hpilo 4.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Boot settings and rebooting" href="boot.html" />
     <link rel="prev" title="Server health" href="health.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body role="document">
+  <body>
     <div class="relbar-top">
         
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,7 +49,7 @@
         <li class="right" >
           <a href="health.html" title="Server health"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
@@ -66,7 +65,7 @@
 <h1>Power manipulation<a class="headerlink" href="#power-manipulation" title="Permalink to this headline">¶</a></h1>
 <p>The power settings and usage of to the server can be inspected using these
 methods. It is also possible to power the server on and off via the iLO, and to
-<a class="reference internal" href="boot.html"><em>boot documentation</em></a>.</p>
+<a class="reference internal" href="boot.html"><span class="doc">boot documentation</span></a>.</p>
 <dl class="class">
 <dt>
 <em class="property">class </em><code class="descclassname">hpilo.</code><code class="descname">Ilo</code></dt>
@@ -86,7 +85,7 @@ methods. It is also possible to power the server on and off via the iLO, and to
 <dt id="hpilo.Ilo.get_host_power_status">
 <code class="descname">get_host_power_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_host_power_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the server is powered on or not</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_host_power_status</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_host_power_status</span><span class="p">()</span>
 <span class="go">ON</span>
 </pre></div>
 </div>
@@ -102,7 +101,7 @@ methods. It is also possible to power the server on and off via the iLO, and to
 <dt id="hpilo.Ilo.get_server_auto_pwr">
 <code class="descname">get_server_auto_pwr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_server_auto_pwr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the automatic power on delay setting</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_server_auto_pwr</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_server_auto_pwr</span><span class="p">()</span>
 <span class="go">ON</span>
 </pre></div>
 </div>
@@ -120,7 +119,7 @@ or random (for a random delay of up to 60 seconds.)</p>
 <dt id="hpilo.Ilo.get_power_readings">
 <code class="descname">get_power_readings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_power_readings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get current, min, max and average power readings</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_power_readings</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_power_readings</span><span class="p">()</span>
 <span class="go">{&#39;average_power_reading&#39;: (65, &#39;Watts&#39;),</span>
 <span class="go"> &#39;maximum_power_reading&#39;: (101, &#39;Watts&#39;),</span>
 <span class="go"> &#39;minimum_power_reading&#39;: (65, &#39;Watts&#39;),</span>
@@ -133,7 +132,7 @@ or random (for a random delay of up to 60 seconds.)</p>
 <dt id="hpilo.Ilo.get_server_power_on_time">
 <code class="descname">get_server_power_on_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_server_power_on_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>How many minutes ago has the server been powered on</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_server_power_on_time</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_server_power_on_time</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">my_ilo</span><span class="o">.</span><span class="n">get_server_power_on_time</span><span class="p">())</span>
 <span class="go">185813</span>
 </pre></div>
@@ -150,7 +149,7 @@ or random (for a random delay of up to 60 seconds.)</p>
 <dt id="hpilo.Ilo.get_host_power_saver_status">
 <code class="descname">get_host_power_saver_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_host_power_saver_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the configuration of the ProLiant power regulator</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_host_power_saver_status</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_host_power_saver_status</span><span class="p">()</span>
 <span class="go">{&#39;host_power_saver&#39;: &#39;AUTO&#39;}</span>
 </pre></div>
 </div>
@@ -166,7 +165,7 @@ or random (for a random delay of up to 60 seconds.)</p>
 <dt id="hpilo.Ilo.get_power_cap">
 <code class="descname">get_power_cap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_power_cap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the power cap setting</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_power_cap</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_power_cap</span><span class="p">()</span>
 <span class="go">OFF</span>
 </pre></div>
 </div>
@@ -182,7 +181,7 @@ or random (for a random delay of up to 60 seconds.)</p>
 <dt id="hpilo.Ilo.get_host_pwr_micro_ver">
 <code class="descname">get_host_pwr_micro_ver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_host_pwr_micro_ver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the version of the power micro firmware</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_host_pwr_micro_ver</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_host_pwr_micro_ver</span><span class="p">()</span>
 <span class="go">3.3</span>
 </pre></div>
 </div>
@@ -192,7 +191,7 @@ or random (for a random delay of up to 60 seconds.)</p>
 <dt id="hpilo.Ilo.get_pwreg">
 <code class="descname">get_pwreg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_pwreg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the power and power alert threshold settings</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_pwreg</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_pwreg</span><span class="p">()</span>
 <span class="go">{&#39;efficiency_mode&#39;: 3,</span>
 <span class="go"> &#39;get_host_power&#39;: {&#39;host_power&#39;: &#39;ON&#39;},</span>
 <span class="go"> &#39;pcap&#39;: {&#39;mode&#39;: &#39;OFF&#39;},</span>
@@ -233,18 +232,32 @@ or random (for a random delay of up to 60 seconds.)</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
       <div class="clearer"></div>
     </div>
     <div class="relbar-bottom">
@@ -264,14 +277,14 @@ or random (for a random delay of up to 60 seconds.)</p>
         <li class="right" >
           <a href="health.html" title="Server health"
              >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.0 documentation</a> &raquo;</li>
+    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
  
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2011-2016, Dennis Kaarsemaker.
+        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>
