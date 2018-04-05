@@ -1,70 +1,171 @@
 
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Authentication settings &#8212; python-hpilo 4.1 documentation</title>
-    <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '4.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/cloud.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Security and SSL settings" href="security.html" />
-    <link rel="prev" title="iLO licensing" href="license.html" /> 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div class="relbar-top">
-        
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> &nbsp; &nbsp;</li>
-        <li class="right" >
-          <a href="security.html" title="Security and SSL settings"
-             accesskey="N">next</a> &nbsp; &nbsp;</li>
-        <li class="right" >
-          <a href="license.html" title="iLO licensing"
-             accesskey="P">previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
- 
-      </ul>
-    </div>
-    </div>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Authentication settings &mdash; python-hpilo 4.1 documentation</title>
   
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="python-hpilo 4.1 documentation" href="index.html"/>
+        <link rel="next" title="Security and SSL settings" href="security.html"/>
+        <link rel="prev" title="iLO licensing" href="license.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> python-hpilo
+          
+
+          
+            
+            <img src="_static/python-hpilo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing python-hpilo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Access from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell.html">Access from the shell</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="info.html">General server and iLO information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networksettings.html">Network settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">iLO licensing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Authentication settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security and SSL settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="health.html">Server health</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power.html">Power manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boot.html">Boot settings and rebooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html">Virtual media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Keyboard and mouse settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snmp.html">SNMP settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firmware.html">Dealing with iLO firmware updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xmldata.html">Unauthenticated iLO and Chassis OA data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">iLO event log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="federation.html">Federation groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ahs.html">Active Health System and Insight Remote Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profile.html">Deployment profiles</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ca.html">Managing SSL certificates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elasticsearch.html">iLO information search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autofirmware.html">Automated firmware updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="puppet.html">Managing iLO&#8217;s with puppet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Common issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">python-hpilo</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Authentication settings</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="authentication-settings">
 <h1>Authentication settings<a class="headerlink" href="#authentication-settings" title="Permalink to this headline">¶</a></h1>
 <p>By default, an iLO has only one user account: Administrator. But via the API
-you can create more users and manipulate them. It’s also possible to import SSH
+you can create more users and manipulate them. It&#8217;s also possible to import SSH
 keys, configure kerberos settings and configure single-sign on. Some methods
 accept a lot of arguments, for details on what these arguments mean, I will
 refer to the <a class="reference external" href="http://www.hp.com/support/ilo4_cli_gde_en">ilo scripting guide</a>.</p>
@@ -195,6 +296,46 @@ will be changed.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="hpilo.Ilo.start_dir_test">
+<code class="descname">start_dir_test</code><span class="sig-paren">(</span><em>dir_admin_distinguished_name</em>, <em>dir_admin_password</em>, <em>test_user_name</em>, <em>test_user_password</em><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.start_dir_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test directory authentication with the specified credentials</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hpilo.Ilo.get_dir_test_results">
+<code class="descname">get_dir_test_results</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_dir_test_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the results of the authentication directory test</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ilo</span><span class="o">.</span><span class="n">get_dir_test_results</span><span class="p">()</span>
+<span class="go">{&#39;bind_to_directory_server&#39;: {&#39;description&#39;: &#39;LDAP Server Error (2) Server Error Message: unsupported or invalid version&#39;,</span>
+<span class="go">                              &#39;status&#39;: &#39;Failed&#39;},</span>
+<span class="go"> &#39;connect_to_directory_server&#39;: {&#39;description&#39;: &#39;&#39;, &#39;status&#39;: &#39;Success&#39;},</span>
+<span class="go"> &#39;connect_using_ssl&#39;: {&#39;description&#39;: &#39;Certificate subject Mismatch, verify OK, error code 20 (unable to get local issuer certificate),  Subject /CN=&quot;ldap-server&quot; Issued By /CN=&quot;provisioning&#39;,</span>
+<span class="go">                       &#39;status&#39;: &#39;Warning&#39;},</span>
+<span class="go"> &#39;directory_administrator_login&#39;: {&#39;description&#39;: &#39;LDAP Server Error (2) Server Error Message: unsupported or invalid version&#39;,</span>
+<span class="go">                                   &#39;status&#39;: &#39;Failed&#39;},</span>
+<span class="go"> &#39;directory_server_dns_name&#39;: {&#39;description&#39;: &#39;Directory Server address ldap.example.com resolved to:  10.1.2.3&#39;,</span>
+<span class="go">                               &#39;status&#39;: &#39;Success&#39;},</span>
+<span class="go"> &#39;directory_user_contexts&#39;: {&#39;description&#39;: &#39;LDAP Server Error (2) Server Error Message: unsupported or invalid version&#39;,</span>
+<span class="go">                             &#39;status&#39;: &#39;Failed&#39;},</span>
+<span class="go"> &#39;lom_object_exists&#39;: {&#39;description&#39;: &#39;LDAP Server Error (2) Server Error Message: unsupported or invalid version&#39;,</span>
+<span class="go">                       &#39;status&#39;: &#39;Failed&#39;},</span>
+<span class="go"> &#39;ping_directory_server&#39;: {&#39;description&#39;: &#39;Response received from:  10.1.2.3&#39;,</span>
+<span class="go">                           &#39;status&#39;: &#39;Success&#39;},</span>
+<span class="go"> &#39;user_authentication&#39;: {&#39;description&#39;: &#39;Unable to authenticate test user foo  [Invalid credentials]&#39;,</span>
+<span class="go">                         &#39;status&#39;: &#39;Failed&#39;},</span>
+<span class="go"> &#39;user_authorization&#39;: {&#39;description&#39;: &#39;LDAP Server Error (2) Server Error Message: unsupported or invalid version&#39;,</span>
+<span class="go">                        &#39;status&#39;: &#39;Failed&#39;}}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="hpilo.Ilo.abort_dir_test">
+<code class="descname">abort_dir_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.abort_dir_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort authentication directory test</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="hpilo.Ilo.get_sso_settings">
 <code class="descname">get_sso_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_sso_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the HP SIM Single Sign-On settings</p>
@@ -228,6 +369,19 @@ will be changed.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="hpilo.Ilo.add_sso_server">
+<code class="descname">add_sso_server</code><span class="sig-paren">(</span><em>server=None</em>, <em>import_from=None</em>, <em>certificate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.add_sso_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an SSO server by name (only if SSO trust level is lowered) or by
+importing a certificate from a server or directly</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hpilo.Ilo.delete_sso_server">
+<code class="descname">delete_sso_server</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.delete_sso_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an SSO server by index</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="hpilo.Ilo.get_twofactor_settings">
 <code class="descname">get_twofactor_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.get_twofactor_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get two-factor authentication settings</p>
@@ -239,86 +393,81 @@ will be changed.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="hpilo.Ilo.mod_twofactor_settings">
+<code class="descname">mod_twofactor_settings</code><span class="sig-paren">(</span><em>auth_twofactor_enable=None</em>, <em>cert_revocation_check=None</em>, <em>cert_owner_san=None</em>, <em>cert_owner_subject=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hpilo.Ilo.mod_twofactor_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the twofactor authenticatino settings</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
 
 
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-        <p class="logo"><a href="index.html" title="index">
-          <img class="logo" src="_static/python-hpilo.png" alt="Logo"/>
-        </a></p>
-  <div class="sphinxprev">
-    <h4>Previous page</h4>
-    <p class="topless"><a href="license.html"
-                          title="Previous page">&larr; iLO licensing</a></p>
-  </div>
-  <div class="sphinxnext">
-    <h4>Next page</h4>
-    <p class="topless"><a href="security.html"
-                          title="Next page">&rarr; Security and SSL settings</a></p>
-  </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-    
-    
-        <div class="sidebar-toggle-group no-js">
-            
-            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
-                 «
-                <span class="show-for-small">hide menu</span>
-                
-            </button>
-            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
-                
-                <span class="show-for-small">menu</span>
-                <span class="hide-for-small">sidebar</span>
-                 »
-            </button>
-        </div>
-    
-      <div class="clearer"></div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="security.html" class="btn btn-neutral float-right" title="Security and SSL settings" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="license.html" class="btn btn-neutral" title="iLO licensing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-    <div class="relbar-bottom">
-        
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> &nbsp; &nbsp;</li>
-        <li class="right" >
-          <a href="security.html" title="Security and SSL settings"
-             >next</a> &nbsp; &nbsp;</li>
-        <li class="right" >
-          <a href="license.html" title="iLO licensing"
-             >previous</a> &nbsp; &nbsp;</li>
-    <li><a href="index.html">python-hpilo 4.1 documentation</a> &#187;</li>
- 
-      </ul>
-    </div>
-    </div>
+  
 
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2011-2018, Dennis Kaarsemaker.
-    </div>
-    <!-- cloud_sptheme 1.4 -->
-  </body>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011-2018, Dennis Kaarsemaker.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'4.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>
